@@ -1,0 +1,28 @@
+name: 'New Relic JUnit Reporter'
+author: 'New Relic'
+description: 'Report JUnit-formatted test run output files to New Relic.'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+inputs:
+  insertApiKey:
+    description: 'Your New Relic Insert API key.'
+    required: true
+  accountId:
+    description: 'Your New Relic account ID. Custom events representing your test run will be posted to this account.'
+    required: true
+  region:
+    description: 'The geographical region for your New Relic account - US or EU. Default: US'
+    required: false
+    default: US
+  testOutputPath:
+    description: 'The path to the JUnit output file.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    NEW_RELIC_INSERT_API_KEY: ${{ inputs.insertApiKey }}
+    NEW_RELIC_ACCOUNT_ID: ${{ inputs.accountId }}
+    NEW_RELIC_REGION: ${{ inputs.region }}
+    NEW_RELIC_TEST_OUTPUT_PATH: ${{ inputs.testOutputPath }}

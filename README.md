@@ -1,38 +1,58 @@
-[![Community Project header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Community_Project.png)](https://opensource.newrelic.com/oss-category/#community-project)
+[![Community Project header](https://github.com/newrelic/open-source-office/raw/master/examples/categories/images/Community_Project.png)](https://github.com/newrelic/open-source-office/blob/master/examples/categories/index.md#category-community-project)
 
-# [Name of Project] [build badges go here when available]
+# New Relic JUnit Reporter
 
->[Brief description - what is the project and value does it provide? How often should users expect to get releases? How is versioning set up? Where does this project want to go?]
+[![GitHub Marketplace version](https://img.shields.io/github/release/newrelic/junit-reporter-action.svg?label=Marketplace&logo=github)](https://github.com/marketplace/actions/new-relic-junit-reporter)
 
-## Installation
+A GitHub Action to send JUnit test run results to New Relic.
 
-> [Include a step-by-step procedure on how to get your code installed. Be sure to include any third-party dependencies that need to be installed separately]
+## Inputs
 
-## Getting Started
->[Simple steps to start working with the software similar to a "Hello World"]
+| Key                 | Required | Default | Description |
+| ------------------- | -------- | ------- | ----------- |
+| `accountId`         | **yes**  | -       | The account to post test run results to. This could also be a subaccount. |
+| `region`            | no       | US      | The region the account belongs to. |
+| `insertApiKey` | **yes**  | -       | Your New Relic [Insert API key](https://docs.newrelic.com/docs/apis/get-started/intro-apis/types-new-relic-api-keys#event-insert-key). |
+| `testOutputPath`    | **yes**  | -       | The path to the JUnit output file. |
 
-## Usage
->[**Optional** - Include more thorough instructions on how to use the software. This section might not be needed if the Getting Started section is enough. Remove this section if it's not needed.]
+## Example usage
 
+#### Post test run results to New Relic
 
-## Building
+The following example will post events of type `TestRun` to New Relic based on the
+contents of the provided JUnit output file.
 
->[**Optional** - Include this section if users will need to follow specific instructions to build the software from source. Be sure to include any third party build dependencies that need to be installed separately. Remove this section if it's not needed.]
+Github secrets assumed to be set:
+* `NEW_RELIC_ACCOUNT_ID` - New Relic Account ID to post the event data to
+* `NEW_RELIC_INSERT_API_KEY` - Insert API key
+* `NEW_RELIC_APPLICATION_ID` - New Relic Application ID to create the marker on
 
-## Testing
+```yaml
+name: Release
 
->[**Optional** - Include instructions on how to run tests if we include tests with the codebase. Remove this section if it's not needed.]
+on:
+  - release
 
-## Support
+jobs:
+  newrelic:
+    runs-on: ubuntu-latest
+    name: Basic Usage
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
+      - name: Post JUnit test results to New Relic
+        uses: newrelic/junit-reporter-action@v1
+        with:
+          accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+          insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
+          path: test-output/integration.xml
+```
 
->Add the url for the support thread here
+#### Querying the data
 
-## Contributing
-We encourage your contributions to improve [project name]! Keep in mind when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. You only have to sign the CLA one time per project.
-If you have any questions, or to execute our corporate CLA, required if your contribution is on behalf of a company,  please drop us an email at opensource@newrelic.com.
+Data can be queried in New Relic One [Chart Builder](https://docs.newrelic.com/docs/chart-builder/use-chart-builder/get-started/introduction-chart-builder) or with the [New Relic CLI](https://github.com/newrelic/newrelic-cli) via the `newrelic nrql query` command:
 
-## License
-[Project Name] is licensed under the [Apache 2.0](http://apache.org/licenses/LICENSE-2.0.txt) License.
->[If applicable: The [project name] also uses source code from third-party libraries. You can find full details on which libraries are used and the terms under which they are licensed in the third-party notices document.]
+```
+newrelic nrql query --accountId 12345 --query 'SELECT * from TestRun'
+```

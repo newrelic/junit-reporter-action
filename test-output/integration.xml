@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="108" failures="0" time="669.160000" name="github.com/newrelic/terraform-provider-newrelic/newrelic">
+		<properties>
+			<property name="go.version" value="go1.13.3 darwin/amd64"></property>
+		</properties>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicApplicationLabel" time="0.000000">
+			<skipped message="=== RUN   TestAccNewRelicApplicationLabel&#xA;--- SKIP: TestAccNewRelicApplicationLabel (0.00s)&#xA;    resource_newrelic_application_label_test.go:15: Skipping TestAccNewRelicApplicationLabel.&#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicApplicationSettings_Basic" time="0.000000">
+			<skipped message="=== RUN   TestAccNewRelicApplicationSettings_Basic&#xA;--- SKIP: TestAccNewRelicApplicationSettings_Basic (0.00s)&#xA;    resource_newrelic_application_settings_test.go:22: &#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInsightsEvent_Basic" time="0.000000">
+			<skipped message="=== RUN   TestAccNewRelicInsightsEvent_Basic&#xA;--- SKIP: TestAccNewRelicInsightsEvent_Basic (0.00s)&#xA;    resource_newrelic_insights_event_test.go:17: &#xA;"></skipped>
+		</testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitorDataSource_Basic" time="6.920000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestParseIDs_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestParseIDs_BadIDs" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestParseHashedIDs_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestParseHashedIDs_Invalid" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestSerializeIDs_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestStripWhitespace" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestSortIntegerSlice" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestProvider" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestProviderImpl" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicDashboard_UpdateWidget" time="8.470000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestNewRelicDashboard_WidgetValidation" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicDashboard_MissingDashboard" time="8.090000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandAlertConditionEntities" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenAlertConditionEntities" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandAlertConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenAlertConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandChannelIDs" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandInfraAlertThreshold" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenInfraAlertThreshold" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandNrqlConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenNrql" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenNrqlConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandPluginsAlertConditionEntities" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenPluginsAlertConditionEntities" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandPluginsConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestFlattenPluginsConditionTerms" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandIntList_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandIntSet_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandStringList_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestExpandStringSet_Basic" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestValidationIntInInSlice" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestValidationFloat64Gte" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestValidationFloat64AtLeast" time="0.000000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_NameGreaterThan64Char" time="0.030000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPlugin_Basic" time="1.910000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannelDataSource_Basic" time="3.120000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicDashboard_Basic" time="3.530000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_ResourceNotFound" time="4.100000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsSecureCredentialDataSource_Basic" time="5.430000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_PagerDuty" time="5.470000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginComponent_Basic" time="3.570000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicKeyTransactionDataSource_Basic" time="2.740000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicApplicationData_Basic" time="2.570000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyDataSource_NameExactMatchOnly" time="3.940000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannelDataSource_NameExactMatchOnly" time="2.830000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_WebhookPayloadValidation" time="0.440000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicy_WithChannels" time="9.250000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicWorkload_EntityScopeAccountsOnly" time="4.160000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_Basic" time="9.890000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicWorkload_EntitiesOnly" time="4.800000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyDataSource_Basic" time="5.870000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicWorkload_EntitySearchQueriesOnly" time="6.020000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_VictorOps" time="3.950000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsSecureCredential_Basic" time="3.480000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_OpsGenie" time="3.750000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicWorkload_Basic" time="6.330000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitor_ScriptAPI" time="5.340000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_TermDurationLessThan5" time="0.020000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_TermDurationGreaterThan120" time="0.020000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_NameLessThan1Char" time="0.020000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitor_OptionalArgs" time="4.780000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitor_Basic" time="4.210000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitor_Browser" time="5.810000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitor_ScriptBrowser" time="6.450000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsMonitorScript_Basic" time="8.800000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition" time="12.170000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_Slack" time="5.860000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_MissingPolicy" time="21.310000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicPluginsAlertCondition_Basic" time="19.880000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_WebhookPayloadHeaderStringConflicts" time="0.430000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_WebhookPayloadHeaderString" time="2.540000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicNrqlAlertCondition_TypeOutlier" time="21.990000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertChannel_Webhook" time="2.420000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicNrqlAlertCondition_MissingPolicy" time="22.570000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsAlertCondition_MissingPolicy" time="26.370000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_InvalidAttrsForType" time="2.820000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_ComputedEvent" time="11.340000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicSyntheticsAlertCondition_Basic" time="34.280000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_ThresholdFloatValue" time="13.480000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicy_ErrorThrownWhenNameEmpty" time="0.020000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicNrqlAlertCondition_Basic" time="31.890000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_IntegrationProvider" time="13.460000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_VoilationCloseTimerDisable" time="14.660000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicDashboard_AddWidget" time="6.200000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_MissingPolicy" time="21.180000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_Where" time="14.550000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicy_NoDiffOnReapply" time="10.740000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicy_ResourceNotFound" time="11.060000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicDashboard_UpdateDashboard" time="5.360000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_EmptyName" time="0.010000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_LongName" time="0.010000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_LongTermDuration" time="0.010000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_ShortTermDuration" time="0.010000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_Thresholds" time="27.010000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicy_Basic" time="17.040000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyChannel_AlertChannelNotFound" time="11.090000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyChannel_AlertPolicyNotFound" time="10.490000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicInfraAlertCondition_Basic" time="24.730000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyChannel_MutipleChannels" time="12.030000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertPolicyChannel_Basic" time="12.630000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_FloatThreshold" time="10.300000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_ZeroThreshold" time="10.130000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_AlertPolicyNotFound" time="17.690000"></testcase>
+		<testcase classname="github.com/newrelic/terraform-provider-newrelic/newrelic" name="TestAccNewRelicAlertCondition_Basic" time="33.290000"></testcase>
+	</testsuite>
+	<testsuite tests="0" failures="0" time="0.000000" name="github.com/newrelic/terraform-provider-newrelic/version">
+		<properties>
+			<property name="go.version" value="go1.13.3 darwin/amd64"></property>
+		</properties>
+	</testsuite>
+</testsuites>

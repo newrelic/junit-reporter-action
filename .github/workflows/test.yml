@@ -1,0 +1,22 @@
+name: Test Suite
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  basic_test:
+    runs-on: ubuntu-latest
+    name: Basic Usage Test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Post JUnit test results to New Relic
+        uses: ./
+        with:
+          accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
+          insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
+          path: test-output/integration.xml
