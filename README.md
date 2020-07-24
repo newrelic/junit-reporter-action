@@ -46,7 +46,7 @@ jobs:
         with:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
-          path: test-output/integration.xml
+          testOutputPath: test-output/integration.xml
 ```
 
 #### Querying the data
