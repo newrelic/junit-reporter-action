@@ -42,7 +42,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Post JUnit test results to New Relic
-        uses: newrelic/junit-reporter-action@v1
+        uses: newrelic/junit-reporter-action@v0.1
         with:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
