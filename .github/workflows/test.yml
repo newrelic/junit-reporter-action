@@ -18,5 +18,5 @@ jobs:
         uses: ./
         with:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
-          insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
+          ingestLicenseKey: ${{ secrets.NEW_RELIC_INGEST_LICENSE_KEY }}
           testOutputPath: test-output/integration.xml

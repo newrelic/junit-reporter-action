@@ -5,8 +5,8 @@ branding:
   icon: 'upload-cloud'
   color: 'blue'
 inputs:
-  insertApiKey:
-    description: 'Your New Relic Insert API key.'
+  ingestLicenseKey:
+    description: 'Your New Relic Ingest License key.'
     required: true
   accountId:
     description: 'Your New Relic account ID. Custom events representing your test run will be posted to this account.'
@@ -22,7 +22,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    NEW_RELIC_INSERT_API_KEY: ${{ inputs.insertApiKey }}
+    NEW_RELIC_INGEST_LICENSE_KEY: ${{ inputs.ingestLicenseKey }}
     NEW_RELIC_ACCOUNT_ID: ${{ inputs.accountId }}
     NEW_RELIC_REGION: ${{ inputs.region }}
     NEW_RELIC_TEST_OUTPUT_PATH: ${{ inputs.testOutputPath }}

@@ -1,7 +1,12 @@
 #!/bin/sh
 
-export NEW_RELIC_API_KEY=dummy_key
-export NEW_RELIC_INSIGHTS_INSERT_KEY=${NEW_RELIC_INSERT_API_KEY}
+newrelic profiles add --profile githubActions \
+  --licenseKey ${NEW_RELIC_INGEST_LICENSE_KEY} \
+  --apiKey ${NEW_RELIC_INGEST_LICENSE_KEY} \
+  --region "${NEW_RELIC_REGION}" \
+  --accountId ${NEW_RELIC_ACCOUNT_ID}
+
+newrelic profile default --profile githubActions
 
 result=$(newrelic reporting junit \
   --accountId "${NEW_RELIC_ACCOUNT_ID}" \
