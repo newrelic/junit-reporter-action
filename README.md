@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Post JUnit test results to New Relic
-        uses: newrelic/junit-reporter-action@v2
+        uses: newrelic/junit-reporter-action@v0.2
         with:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           ingestLicenseKey: ${{ secrets.NEW_RELIC_INGEST_LICENSE_KEY }}
