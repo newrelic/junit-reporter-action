@@ -12,7 +12,7 @@ A GitHub Action to send JUnit test run results to New Relic.
 | ------------------- | -------- | ------- | ----------- |
 | `accountId`         | **yes**  | -       | The account to post test run results to. This could also be a subaccount. |
 | `region`            | no       | US      | The region the account belongs to. |
-| `insertApiKey` | **yes**  | -       | Your New Relic [Insert API key](https://docs.newrelic.com/docs/apis/get-started/intro-apis/types-new-relic-api-keys#event-insert-key). |
+| `ingestLicenseKey` | **yes**  | -       | Your New Relic [License key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/) used for data ingest. |
 | `testOutputPath`    | **yes**  | -       | The path to the JUnit output file. |
 
 ## Example usage
@@ -24,14 +24,15 @@ contents of the provided JUnit output file.
 
 Github secrets assumed to be set:
 * `NEW_RELIC_ACCOUNT_ID` - New Relic Account ID to post the event data to
-* `NEW_RELIC_INSERT_API_KEY` - Insert API key
-* `NEW_RELIC_APPLICATION_ID` - New Relic Application ID to create the marker on
+* `NEW_RELIC_INGEST_LICENSE_KEY` - New Relic Ingest License Key
 
 ```yaml
 name: Release
 
 on:
-  - release
+  push:
+    branches:
+        - main
 
 jobs:
   newrelic:
@@ -42,10 +43,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Post JUnit test results to New Relic
-        uses: newrelic/junit-reporter-action@v0.1
+        uses: newrelic/junit-reporter-action@v0.2
         with:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
-          insertApiKey: ${{ secrets.NEW_RELIC_INSERT_API_KEY }}
+          ingestLicenseKey: ${{ secrets.NEW_RELIC_INGEST_LICENSE_KEY }}
           testOutputPath: test-output/integration.xml
 ```
 
