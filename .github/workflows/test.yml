@@ -20,3 +20,4 @@ jobs:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           ingestLicenseKey: ${{ secrets.NEW_RELIC_INGEST_LICENSE_KEY }}
           testOutputPath: test-output/integration.xml
+          customAttributes: '{"sha": ${{ toJson(github.sha)}} }'

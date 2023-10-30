@@ -8,12 +8,13 @@ A GitHub Action to send JUnit test run results to New Relic.
 
 ## Inputs
 
-| Key                 | Required | Default | Description |
-| ------------------- | -------- | ------- | ----------- |
-| `accountId`         | **yes**  | -       | The account to post test run results to. This could also be a subaccount. |
-| `region`            | no       | US      | The region the account belongs to. |
+| Key                | Required | Default | Description                                                                                                            |
+|--------------------|----------| ------- |------------------------------------------------------------------------------------------------------------------------|
+| `accountId`        | **yes**  | -       | The account to post test run results to. This could also be a subaccount.                                              |
+| `region`           | no       | US      | The region the account belongs to.                                                                                     |
 | `ingestLicenseKey` | **yes**  | -       | Your New Relic [License key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/) used for data ingest. |
-| `testOutputPath`    | **yes**  | -       | The path to the JUnit output file. |
+| `testOutputPath`   | **yes**  | -       | The path to the JUnit output file.                                                                                     |
+| `customAttributes` | **no**   | -       | Any custom attributes to include in JSON format.                                                                       |
 
 ## Example usage
 
@@ -48,6 +49,7 @@ jobs:
           accountId: ${{ secrets.NEW_RELIC_ACCOUNT_ID }}
           ingestLicenseKey: ${{ secrets.NEW_RELIC_INGEST_LICENSE_KEY }}
           testOutputPath: test-output/integration.xml
+          customAttributes: '{"sha": ${{ toJson(github.sha)}} }'
 ```
 
 #### Querying the data
