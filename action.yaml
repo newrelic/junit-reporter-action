@@ -18,6 +18,9 @@ inputs:
   testOutputPath:
     description: 'The path to the JUnit output file.'
     required: true
+  customAttributes:
+    description: 'Any custom attributes to include in JSON format.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -26,3 +29,4 @@ runs:
     NEW_RELIC_ACCOUNT_ID: ${{ inputs.accountId }}
     NEW_RELIC_REGION: ${{ inputs.region }}
     NEW_RELIC_TEST_OUTPUT_PATH: ${{ inputs.testOutputPath }}
+    NEW_RELIC_CUSTOM_ATTRIBUTES: ${{ inputs.customAttributes }}
